@@ -1,0 +1,28 @@
+{
+  "id": "temperanca",
+  "title": "Temperança RPG",
+  "description": "Sistema de Survival Horror focado em estresse e espaços de dano.",
+  "version": "2.0.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "esmodules": ["module/temperanca.mjs"],
+  "styles": ["temperanca.css"],
+  "documentTypes": {
+    "Actor": {
+      "condenado": "Condenado",
+      "npc": "Inimigo"
+    },
+"Item": {
+      "item": "Item",
+      "talento": "Talento",
+      "feitico": "Feitiço",
+      "arma": "Arma",
+      "protecao": "Proteção",
+      "consumivel": "Consumível",
+      "equipamento": "Equipamento",
+      "recurso": "Recurso"
+    }
+    }
+  }

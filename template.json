@@ -1,0 +1,68 @@
+{
+  "Actor": {
+    "types": ["condenado"],
+    "condenado": {
+      "attributes": {
+        "estresse": { "value": 0 },
+        "xp": { "value": 0 },
+        "limiares": { "maior": 6, "grave": 12 },
+        "rd": { 
+          "fisico": 0,
+          "balistico": 0,
+          "elemental": 0,
+          "sobrenatural": 0
+        }
+      },
+      "saude": {
+        "machucado": { "value": 0, "max": 4, "temp": 0 },
+        "ferimento": { "value": 0, "max": 2, "temp": 0 },
+        "trauma": { "value": 0, "max": 1, "temp": 0 },
+        "letal": { "value": 0, "max": 1, "temp": 0 }
+      },
+      "stats": {
+        "fisico": { "value": 1, "label": "Físico" },
+        "motoras": { "value": 1, "label": "Motoras" },
+        "intelecto": { "value": 1, "label": "Intelecto" },
+        "mente": { "value": 1, "label": "Mente" }
+      },
+      "passivas": {
+        "vontade": { "value": 0, "label": "Vontade" },
+        "fortitude": { "value": 0, "label": "Fortitude" },
+        "reflexos": { "value": 0, "label": "Reflexos" }
+      },
+      "skills": {
+        "atletismo": { "value": 0, "label": "Atletismo", "attr": "fisico", "type": "tecnica" },
+        "ciencias": { "value": 0, "label": "Ciências", "attr": "intelecto", "type": "tecnica" },
+        "crime": { "value": 0, "label": "Crime", "attr": "motoras", "type": "tecnica" },
+        "eloquencia": { "value": 0, "label": "Eloquência", "attr": "mente", "type": "tecnica" },
+        "engenharia": { "value": 0, "label": "Engenharia", "attr": "intelecto", "type": "tecnica" },
+        "furtividade": { "value": 0, "label": "Furtividade", "attr": "motoras", "type": "tecnica" },
+        "historia": { "value": 0, "label": "História", "attr": "intelecto", "type": "tecnica" },
+        "infamia": { "value": 0, "label": "Infâmia", "attr": "mente", "type": "tecnica" },
+        "medicina": { "value": 0, "label": "Medicina", "attr": "intelecto", "type": "tecnica" },
+        "misticismo": { "value": 0, "label": "Misticismo", "attr": "intelecto", "type": "tecnica" },
+        "percepcao": { "value": 0, "label": "Percepção", "attr": "mente", "type": "tecnica" },
+        "sobrevivencia": { "value": 0, "label": "Sobrevivência", "attr": "intelecto", "type": "tecnica" },
+        "desarmado": { "value": 0, "label": "Desarmado", "attr": "fisico", "type": "combate" },
+        "armasbrancas": { "value": 0, "label": "Armas Brancas", "attr": "fisico", "type": "combate" },
+        "disparo": { "value": 0, "label": "Armas de Disparo", "attr": "motoras", "type": "combate" },
+        "fogo": { "value": 0, "label": "Armas de Fogo", "attr": "motoras", "type": "combate" }
+      },
+      "details": {
+        "conceito": "",
+        "motivacao": ""
+      }
+    }
+  },
+"Item": {
+    "types": ["item", "talento", "arma", "feitico", "protecao", "consumivel", "equipamento", "recurso"],
+    "talento": { "tier": 1, "tree": "", "description": "" },
+    "feitico": { "description": "" },
+    "arma": { "damage": "1d6", "quality": "Comum", "durability": 5, "weight": 1, "description": "" },
+    "protecao": { "reduction": 0, "threshold_bonus_major": 0, "threshold_bonus_severe": 0, "durability": 5, "weight": 1, "description": "" },
+    "consumivel": { "uses": 1, "weight": 0.5, "description": "" },
+    "equipamento": { "durability": 3, "weight": 1, "description": "" },
+    "recurso": { "quantity": 1, "weight": 1, "description": "" },
+    "item": { "weight": 1, "quantity": 1, "description": "" }
+  }
+}
