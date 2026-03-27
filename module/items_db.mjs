@@ -44,8 +44,8 @@ export const ITENS_DB = {
     ],
     "recurso": [
         { name: "Sucata", quantity: 1, weight: 1, description: "Usada para reparos e modificações." },
-        { name: "Comida (Ração)", quantity: 1, weight: 0.3, description: "Remove fome. 1 Carga a cada 3 unidades." },
-        { name: "Munição (Pack)", quantity: 1, weight: 1, description: "Munição para armas de fogo." },
+        { name: "Comida", quantity: 1, weight: 0.3, description: "Remove fome. 1 Carga a cada 3 unidades." },
+        { name: "Munição", quantity: 1, weight: 1, description: "Munição para armas de fogo." },
         { name: "Componentes Místicos", quantity: 1, weight: 0.3, description: "Para rituais e feitiços." }
     ]
 };

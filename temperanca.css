@@ -429,3 +429,52 @@ h1, h2, h3 { border-bottom: 2px solid #3a2a2a; color: #3a2a2a; font-variant: sma
     box-shadow: 0 0 5px #a00;
     border-color: #a00;
 }
+
+/* ==========================================
+   AJUSTES DOS DIALOGS DE ROLAGEM / CONJURAÇÃO
+   ========================================== */
+   .dialog-content form {
+    font-family: 'Georgia', serif;
+}
+
+.dialog-content .grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.dialog-content .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.03);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.dialog-content .form-group label {
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.dialog-content .form-group input {
+    width: 60px;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    border: 1px solid #aaa;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 3px;
+    padding: 2px;
+}
+
+.dialog-content .form-group input:focus {
+    box-shadow: 0 0 5px #a00;
+    border-color: #a00;
+    outline: none;
+}

@@ -1,4 +1,4 @@
-export async function rollCheck(actor, label, bonus, attributeKey, difficulty, isSpell = false, advantage = 0, disadvantage = 0) {
+export async function rollCheck(actor, label, bonus, attributeKey, difficulty, isSpell = false, advantage = 0, disadvantage = 0, modifier = 0) {
   // 1. Obter valores iniciais
   const attributeValue = actor.system.stats[attributeKey]?.value || 0;
   const stressValue = actor.system.attributes.estresse.value || 0;
@@ -88,7 +88,7 @@ export async function rollCheck(actor, label, bonus, attributeKey, difficulty, i
       }
   }
 
-  let total = highest + bonus;
+  let total = highest + bonus + modifier;
   
   // 8. Determinar Resultado (Lógica de Pânico/Distorção/Falha)
   let outcome = "Falha";
@@ -125,7 +125,7 @@ export async function rollCheck(actor, label, bonus, attributeKey, difficulty, i
       </div>
       
       <div class="roll-dice">
-        ${formula} + ${bonus} (Mod)
+        ${formula} + ${bonus} (Hab) ${modifier !== 0 ? (modifier > 0 ? `+ ${modifier} (Extra)` : `- ${Math.abs(modifier)} (Extra)`) : ''}
       </div>
       
       ${(advantage > 0 || disadvantage > 0) ? 

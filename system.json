@@ -1,7 +1,7 @@
 {
   "id": "temperanca",
   "title": "Temperança RPG",
-  "description": "Sistema de Survival Horror focado em estresse e espaços de dano.",
+  "description": "Sistema de Survival Horror",
   "version": "2.0.0",
   "compatibility": {
     "minimum": "13",

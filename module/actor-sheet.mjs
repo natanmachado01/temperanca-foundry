@@ -310,9 +310,15 @@ async _onAddItemDialog(ev) {
         title: `Conjurar ${item.name}`,
         content: `
             <form style="font-family:'Georgia'">
-                <div class="form-group">
-                    <label>Dificuldade (DT)</label>
-                    <input type="number" name="dt" value="8" style="text-align:center">
+                <div class="grid grid-2col" style="gap:10px;">
+                      <div class="form-group">
+                          <label>Dificuldade (DT)</label>
+                          <input type="number" name="dt" value="8" style="text-align:center">
+                      </div>
+                      <div class="form-group">
+                          <label style="color:#0055a0">Modificador Extra</label>
+                          <input type="number" name="modifier" value="0" style="text-align:center">
+                      </div>
                 </div>
                 <div class="grid grid-2col" style="margin-top:10px; gap:10px;">
                     <div class="form-group">
@@ -336,9 +342,9 @@ async _onAddItemDialog(ev) {
                     const dt = parseInt(html.find('[name="dt"]').val()) || 8;
                     const adv = parseInt(html.find('[name="advantage"]').val()) || 0;
                     const dis = parseInt(html.find('[name="disadvantage"]').val()) || 0;
-                    
+                    const modifier = parseInt(html.find('[name="modifier"]').val()) || 0;
                     // Passa adv e dis para a função
-                    rollCheck(this.actor, `Conjurar: ${item.name}`, vontadeBonus, "mente", dt, true, adv, dis);
+                    rollCheck(this.actor, `Conjurar: ${item.name}`, vontadeBonus, "mente", dt, true, adv, dis, modifier);
                 }
             }
         },
@@ -367,10 +373,16 @@ async _onAddItemDialog(ev) {
             <option value="mente" ${defaultAttr === "mente" ? "selected" : ""}>Mente</option>
           </select>
         </div>
-        <div class="form-group">
-          <label>Dificuldade (DT)</label>
-          <input type="number" name="dt" value="8" style="text-align:center">
-        </div>
+        <div class="grid grid-2col" style="gap:10px;">
+              <div class="form-group">
+                  <label>Dificuldade (DT)</label>
+                  <input type="number" name="dt" value="8" style="text-align:center">
+              </div>
+              <div class="form-group">
+                  <label style="color:#0055a0">Modificador Extra</label>
+                  <input type="number" name="modifier" value="0" style="text-align:center">
+              </div>
+          </div>
         <div class="grid grid-2col" style="margin-top:10px; gap:10px;">
             <div class="form-group">
                 <label style="color:green">Vantagem (+d)</label>
@@ -392,9 +404,9 @@ async _onAddItemDialog(ev) {
             const dt = parseInt(html.find('[name="dt"]').val()) || 8;
             const adv = parseInt(html.find('[name="advantage"]').val()) || 0;
             const dis = parseInt(html.find('[name="disadvantage"]').val()) || 0;
-
+            const modifier = parseInt(html.find('[name="modifier"]').val()) || 0;
             // Passa adv e dis para a função
-            rollCheck(this.actor, label, bonus, attr, dt, false, adv, dis);
+            rollCheck(this.actor, label, bonus, attr, dt, false, adv, dis, modifier);
           }
         }
       },
