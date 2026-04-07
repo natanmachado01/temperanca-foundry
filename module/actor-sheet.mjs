@@ -28,8 +28,12 @@ export class TemperancaActorSheet extends ActorSheet {
   _prepareCharacterData(context) {
     const sys = context.system;
     const fisico = sys.stats?.fisico?.value || 1;
+    const motoras = sys.stats?.motoras?.value || 1;
     const mente = sys.stats?.mente?.value || 1;
-    
+
+    // Helper para verificar talentos
+    const hasTalento = (nome) => context.items?.some(i => i.type === 'talento' && i.name === nome);
+
     // Saúde (Baseado em Físico + Temp)
     let baseM = 4; let baseF = 2; let baseT = 1; let baseL = 1;
     if (fisico >= 2) baseF = 3;
@@ -48,9 +52,17 @@ export class TemperancaActorSheet extends ActorSheet {
         sys.saude.trauma.max = baseT + tempT;
         sys.saude.letal.max = baseL + tempL;
     }
-    
-    // Estresse
-    sys.attributes.estresse.max = 4 + mente;
+
+    // Estresse (base + talentos)
+    let estreseMax = 4 + mente;
+    if (hasTalento("Afogar o Trauma")) estreseMax += 2;
+    if (hasTalento("Presença Acolhedora")) estreseMax += 1;
+    sys.attributes.estresse.max = estreseMax;
+
+    // Reações: 1 + Motoras + 2 (se tiver Reflexos Defensivos)
+    const bonusReflexos = hasTalento("Reflexos Defensivos") ? 2 : 0;
+    if (!sys.attributes.reacoes) sys.attributes.reacoes = { value: 0 };
+    sys.attributes.reacoes.max = 1 + motoras + bonusReflexos;
 
     // Limiares
     if (sys.attributes.limiares) {

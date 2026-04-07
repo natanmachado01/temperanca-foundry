@@ -4,6 +4,7 @@
     "condenado": {
       "attributes": {
         "estresse": { "value": 0 },
+        "reacoes": { "value": 0 },
         "xp": { "value": 0 },
         "limiares": { "maior": 6, "grave": 12 },
         "rd": { 

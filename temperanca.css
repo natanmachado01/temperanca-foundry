@@ -39,12 +39,23 @@ h1, h2, h3 { border-bottom: 2px solid #3a2a2a; color: #3a2a2a; font-variant: sma
 .stress-divider { font-size: 20px; margin: 0 5px; color: #888; }
 .stress-max { font-size: 20px; font-weight: bold; color: #800; }
 
+/* Reações */
+.reacoes-title { color: #0a4a6e; border-bottom-color: #0a4a6e; margin-top: 10px; }
+.reacoes-box {
+    display: flex; justify-content: center; align-items: center;
+    border: 2px dashed #0a4a6e; background: #d8eaf5; padding: 10px;
+}
+.reacoes-current { width: 50px; font-size: 20px; text-align: right; color: #0a4a6e; border-bottom: none !important; }
+.reacoes-max { font-size: 20px; font-weight: bold; color: #0a4a6e; }
+.reacoes-hint { font-size: 9px; color: #555; text-align: center; margin: 2px 0 8px 0; }
+
 /* Limiares */
-.thresholds { display: flex; gap: 10px; margin-bottom: 15px; }
+.thresholds { display: flex; gap: 10px; margin-bottom: 4px; }
 .thresh-group { flex: 1; text-align: center; border: 1px solid #ccc; padding: 3px; background: rgba(255,255,255,0.2); }
 .thresh-group label { display: block; font-size: 10px; text-transform: uppercase; }
 .thresh-group input, .thresh-group .static-val { width: 100%; text-align: center; font-size: 16px; font-weight: bold; }
 .thresh-group.lethal { border-color: #a00; color: #a00; background: rgba(255,0,0,0.05); }
+.thresholds-legend { font-size: 9px; color: #555; text-align: center; margin: 0 0 10px 0; line-height: 1.4; border-top: 1px dotted #ccc; padding-top: 3px; }
 
 /* --- CORREÇÃO DOS PIPS (BOLINHAS) --- */
 .damage-tracker { background: rgba(0,0,0,0.02); padding: 5px; border: 1px solid #ccc; }

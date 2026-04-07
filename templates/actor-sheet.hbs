@@ -38,24 +38,32 @@
                     <span class="stress-divider">/</span>
                     <span class="stress-max">{{system.attributes.estresse.max}}</span>
                 </div>
+                <h3 class="section-title reacoes-title">Reações</h3>
+                <div class="reacoes-box">
+                    <input class="reacoes-current" type="number" name="system.attributes.reacoes.value" value="{{system.attributes.reacoes.value}}" min="0" max="{{system.attributes.reacoes.max}}">
+                    <span class="stress-divider">/</span>
+                    <span class="reacoes-max">{{system.attributes.reacoes.max}}</span>
+                </div>
+                <p class="reacoes-hint">1 + Motoras ({{system.stats.motoras.value}}) = {{system.attributes.reacoes.max}}</p>
             </div>
 
             <div class="right-column">
-               <h3 class="section-title">Limiares</h3>
+               <h3 class="section-title">Limiares de Dano</h3>
                 <div class="thresholds">
                     <div class="thresh-group">
-                        <label>Maior</label>
+                        <label>Maior (Leve)</label>
                         <input type="number" name="system.attributes.limiares.maior" value="{{system.attributes.limiares.maior}}"/>
                     </div>
                     <div class="thresh-group">
-                        <label>Grave</label>
+                        <label>Grave (Mod.)</label>
                         <input type="number" name="system.attributes.limiares.grave" value="{{system.attributes.limiares.grave}}"/>
                     </div>
                     <div class="thresh-group lethal">
-                        <label>Letal</label>
+                        <label>Letal (Pé na Cova)</label>
                         <div class="static-val">{{system.attributes.limiares.letal}}</div>
                     </div>
                 </div>
+                <p class="thresholds-legend">Dano Leve &lt; Limiar Maior | Limiar Maior &le; Dano Moderado. &lt; Limiar Grave | Grave &le; Dano Grave &lt; Limiar Letal | Limiar Letal &le; Dano Letal</p>
 
                 <h3 class="section-title" style="margin-top: 10px;">Redução de Dano</h3>
                 <div class="rd-grid">
