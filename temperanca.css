@@ -50,11 +50,15 @@ h1, h2, h3 { border-bottom: 2px solid #3a2a2a; color: #3a2a2a; font-variant: sma
 .reacoes-hint { font-size: 9px; color: #555; text-align: center; margin: 2px 0 8px 0; }
 
 /* Limiares */
-.thresholds { display: flex; gap: 10px; margin-bottom: 4px; }
-.thresh-group { flex: 1; text-align: center; border: 1px solid #ccc; padding: 3px; background: rgba(255,255,255,0.2); }
-.thresh-group label { display: block; font-size: 10px; text-transform: uppercase; }
-.thresh-group input, .thresh-group .static-val { width: 100%; text-align: center; font-size: 16px; font-weight: bold; }
-.thresh-group.lethal { border-color: #a00; color: #a00; background: rgba(255,0,0,0.05); }
+.thresholds-band { display: flex; border: 1px solid #555; margin-bottom: 4px; overflow: hidden; border-radius: 3px; }
+.thresh-dmg-label { flex: 1; background: #3a2e25; color: #d4c5a0; text-transform: uppercase; font-size: 9px; font-weight: bold; text-align: center; padding: 6px 3px; display: flex; align-items: center; justify-content: center; letter-spacing: 0.5px; border-right: 1px solid #555; }
+.thresh-dmg-label:last-child { border-right: none; }
+.thresh-val-cell { flex: 1; text-align: center; background: #e8e0d0; padding: 3px 2px; border-right: 1px solid #888; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.thresh-val-name { display: block; font-size: 8px; text-transform: uppercase; color: #555; line-height: 1.2; }
+.thresh-val-cell input { width: 100%; text-align: center; font-size: 18px; font-weight: bold; color: #222; background: transparent; border: none; padding: 0; }
+.thresh-val-cell .thresh-static { font-size: 20px; font-weight: bold; color: #fff; }
+.thresh-val-cell.letal { background: #8b0000; border-color: #600; }
+.thresh-val-cell.letal .thresh-val-name { color: #ffbbbb; }
 .thresholds-legend { font-size: 9px; color: #555; text-align: center; margin: 0 0 10px 0; line-height: 1.4; border-top: 1px dotted #ccc; padding-top: 3px; }
 
 /* --- CORREÇÃO DOS PIPS (BOLINHAS) --- */

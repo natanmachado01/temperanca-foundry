@@ -49,21 +49,25 @@
 
             <div class="right-column">
                <h3 class="section-title">Limiares de Dano</h3>
-                <div class="thresholds">
-                    <div class="thresh-group">
-                        <label>Maior (Leve)</label>
+                <div class="thresholds-band">
+                    <div class="thresh-dmg-label">Machucado</div>
+                    <div class="thresh-val-cell">
+                        <span class="thresh-val-name">Maior (Leve)</span>
                         <input type="number" name="system.attributes.limiares.maior" value="{{system.attributes.limiares.maior}}"/>
                     </div>
-                    <div class="thresh-group">
-                        <label>Grave (Mod.)</label>
+                    <div class="thresh-dmg-label">Ferimento</div>
+                    <div class="thresh-val-cell">
+                        <span class="thresh-val-name">Grave (Mod.)</span>
                         <input type="number" name="system.attributes.limiares.grave" value="{{system.attributes.limiares.grave}}"/>
                     </div>
-                    <div class="thresh-group lethal">
-                        <label>Letal (Pé na Cova)</label>
-                        <div class="static-val">{{system.attributes.limiares.letal}}</div>
+                    <div class="thresh-dmg-label">Trauma</div>
+                    <div class="thresh-val-cell letal">
+                        <span class="thresh-val-name">Letal (Pé na Cova)</span>
+                        <div class="thresh-static">{{system.attributes.limiares.letal}}</div>
                     </div>
+                    <div class="thresh-dmg-label">Letal</div>
                 </div>
-                <p class="thresholds-legend">Dano Leve &lt; Limiar Maior | Limiar Maior &le; Dano Moderado. &lt; Limiar Grave | Grave &le; Dano Grave &lt; Limiar Letal | Limiar Letal &le; Dano Letal</p>
+                <p class="thresholds-legend">MACHUCADO &lt; Limiar Maior | Limiar Maior &le; FERIMENTO &lt; Limiar Grave |<br>Limiar Grave &le; TRAUMA &lt; Limiar Letal | Limiar Letal &le; LETAL</p>
 
                 <h3 class="section-title" style="margin-top: 10px;">Redução de Dano</h3>
                 <div class="rd-grid">
